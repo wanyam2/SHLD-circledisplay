@@ -25,7 +25,13 @@
 .fullscreen-element {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* contain을 fill로 변경 */
+
+    /* 지난번 답변에서 적용한 설정 (화면 꽉 채우기) */
+    object-fit: cover;
+
+    /* --- 위치 미세 조정 코드 추가 --- */
+    /* 왼쪽이 잘리니, 비디오를 오른쪽(X축 양의 방향)으로 10px 이동 */
+    transform: translateX(10px);
 }
 
 /* --- 시계 디자인 --- */
