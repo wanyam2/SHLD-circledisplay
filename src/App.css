@@ -1,0 +1,103 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.visible { opacity: 1; z-index: 2; }
+.hidden { opacity: 0; z-index: 1; }
+
+.fullscreen-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- 시계 디자인 --- */
+.analog-clock {
+    /* 크기를 300px -> 500px로 확대 */
+    width: 500px;
+    height: 500px;
+    border: 12px solid #FDF395;
+    border-radius: 50%;
+    position: relative;
+    background-color: rgba(253, 243, 149, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 숫자 스타일 */
+.hour-number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FDF395;
+    padding: 15px; /* 테두리와 숫자 사이 간격 */
+    box-sizing: border-box;
+}
+
+/* 숫자 안의 텍스트가 회전하지 않도록 보정 */
+.hour-number span {
+    display: inline-block;
+}
+
+/* 바늘 스타일 조정 (시계가 커진 만큼 길게 수정) */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+}
+
+.hour {
+    width: 12px;
+    height: 120px; /* 길게 수정 */
+    background-color: white;
+    margin-left: -6px;
+    z-index: 3;
+}
+
+.minute {
+    width: 8px;
+    height: 180px; /* 길게 수정 */
+    background-color: #FDF395;
+    margin-left: -4px;
+    z-index: 2;
+}
+
+.second {
+    width: 3px;
+    height: 210px; /* 길게 수정 */
+    background-color: #ff4757;
+    margin-left: -1.5px;
+    z-index: 1;
+}
+
+.center-pin {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+}
