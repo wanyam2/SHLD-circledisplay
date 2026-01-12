@@ -7,13 +7,13 @@ React와 Vite를 사용하여 구축된 웹 애플리케이션입니다.
 이 프로젝트를 실행하기 전에 다음이 설치되어 있어야 합니다:
 
 - **Node.js** (버전 18 이상 권장)
-- **npm** 또는 **yarn** (Node.js와 함께 설치됨)
+- **pnpm** (패키지 매니저)
 
-Node.js가 설치되어 있는지 확인하려면 터미널에서 다음 명령어를 실행하세요:
+Node.js와 pnpm이 설치되어 있는지 확인하려면 터미널에서 다음 명령어를 실행하세요:
 
 ```bash
 node --version
-npm --version
+pnpm --version
 ```
 
 ## 설치 방법
@@ -30,7 +30,7 @@ cd my-display-app
 2. 프로젝트 디렉토리에서 의존성을 설치합니다:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## 실행 방법
@@ -38,7 +38,7 @@ npm install
 개발 서버를 시작하려면 다음 명령어를 실행하세요:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 브라우저에서 `http://localhost:5173` (또는 터미널에 표시된 주소)로 접속하여 애플리케이션을 확인할 수 있습니다.
@@ -50,7 +50,7 @@ npm run dev
 프로덕션용 빌드를 생성하려면:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 빌드된 파일은 `dist` 디렉토리에 생성됩니다.
@@ -58,15 +58,15 @@ npm run build
 빌드된 애플리케이션을 미리보려면:
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## 사용 가능한 스크립트
 
-- `npm run dev` - 개발 서버 시작
-- `npm run build` - 프로덕션용 빌드 생성
-- `npm run preview` - 빌드된 애플리케이션 미리보기
-- `npm run lint` - ESLint를 사용한 코드 검사
+- `pnpm dev` - 개발 서버 시작
+- `pnpm build` - 프로덕션용 빌드 생성
+- `pnpm preview` - 빌드된 애플리케이션 미리보기
+- `pnpm lint` - ESLint를 사용한 코드 검사
 
 ## 기술 스택
 
@@ -82,11 +82,11 @@ npm run preview
 
 ### 의존성 설치 오류
 
-`node_modules` 폴더와 `package-lock.json`을 삭제한 후 다시 설치해보세요:
+`node_modules` 폴더와 `pnpm-lock.yaml`을 삭제한 후 다시 설치해보세요:
 
 ```bash
-rm -rf node_modules package-lock.json
-npm install
+rm -rf node_modules pnpm-lock.yaml
+pnpm install
 ```
 
 ## 라이선스
